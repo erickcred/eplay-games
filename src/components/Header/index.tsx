@@ -9,10 +9,7 @@ const Header = () => {
     <>
       <S.HeaderBar>
         <div>
-          <Link
-            to="/"
-            style={{ padding: '0px', margin: '0px', display: 'inline-block' }}
-          >
+          <Link to="/">
             <img src={logo} alt="EPLAY - games Logo" />
           </Link>
 
