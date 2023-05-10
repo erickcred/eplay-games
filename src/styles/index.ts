@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 export const cores = {
   branco: '#eeeeee',
@@ -22,14 +22,16 @@ export const GlobalCss = createGlobalStyle`
     margin-top: 40px;
   }
 
-`
-
-export const Container = styled.div`
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
+  .container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
   @media (max-width: 768px) {
-    width: 95%;
+    .container {
+      width: 95%;
+    }
   }
+
 `
