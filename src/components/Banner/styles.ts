@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Tag from '../Tag'
 import { TagContainer } from '../Tag/styles'
 
 export const ImageBanner = styled.div`
