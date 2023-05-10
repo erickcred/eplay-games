@@ -18,6 +18,7 @@ export const Banner = () => {
               <br /> por apenas R$ 99,90
             </Precos>
           </div>
+
           <Button
             type="link"
             title="Clique aqui para aproveitar a oferta"
