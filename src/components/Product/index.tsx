@@ -2,6 +2,7 @@ import Tag from '../Tag'
 import { Card, Description, Infos, Title } from './styles'
 
 type Props = {
+  id: number
   image: string
   title: string
   category: string
@@ -11,6 +12,7 @@ type Props = {
 }
 
 const Product = ({
+  id,
   image,
   title,
   category,

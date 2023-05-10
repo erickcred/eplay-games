@@ -31,7 +31,8 @@ export const Links = styled.ul`
 
 export const LinkItem = styled.li`
   list-style: none;
-  margin-right: 16px;
+  margin-right: 10px;
+  padding: 6px;
 `
 
 export const LinkCart = styled.a`
