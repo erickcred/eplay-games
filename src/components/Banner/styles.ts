@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import Tag from '../Tag'
+import { TagContainer } from '../Tag/styles'
 
 export const ImageBanner = styled.div`
   background-repeat: no-repeat;
@@ -7,8 +9,16 @@ export const ImageBanner = styled.div`
   font-weight: bold;
   width: 100%;
   height: 560px;
-  position: relative;
-  padding-top: 340px;
+
+  .container {
+    padding-top: 340px;
+    position: relative;
+  }
+
+  ${TagContainer} {
+    position: absolute;
+    top: 32px;
+  }
 `
 
 export const Titulo = styled.h2`
