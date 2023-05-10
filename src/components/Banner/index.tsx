@@ -10,13 +10,21 @@ export const Banner = () => {
       <ImageBanner style={{ backgroundImage: `url(${bannerImg}` }}>
         <div className="container">
           <Tag size="big">Destaque do dia</Tag>
-          <Titulo>Marvel&apos;s Spider-Man: Miles Morales PS4 & PS5</Titulo>
+          <div>
+            <Titulo>Marvel&apos;s Spider-Man: Miles Morales PS4 & PS5</Titulo>
 
-          <Precos>
-            De <span>R$ 250,00</span>
-            <br /> por apenas R$ 99,90
-          </Precos>
-          <Button />
+            <Precos>
+              De <span>R$ 250,00</span>
+              <br /> por apenas R$ 99,90
+            </Precos>
+          </div>
+          <Button
+            type="link"
+            title="Clique aqui para aproveitar a oferta"
+            to="/produto"
+          >
+            Aproveitar
+          </Button>
         </div>
       </ImageBanner>
     </>

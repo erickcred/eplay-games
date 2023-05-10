@@ -1,7 +1,27 @@
-import { ButtonContainer } from './stylres'
+import { ButtonContainer, ButtonLink } from './stylres'
 
-const Button = () => {
-  return <ButtonContainer>Nome do botão</ButtonContainer>
+type Props = {
+  type: 'button' | 'link'
+  title: string
+  to?: string
+  onClick?: () => void
+  children: string
+}
+
+const Button = ({ type, title, to, onClick, children }: Props) => {
+  if (type === 'button') {
+    return (
+      <ButtonContainer type="button" title={title} onClick={onClick}>
+        {children}
+      </ButtonContainer>
+    )
+  }
+
+  return (
+    <ButtonLink title={title} to={to as string}>
+      {children}
+    </ButtonLink>
+  )
 }
 
 export default Button
