@@ -1,7 +1,17 @@
 import React from 'react'
 
+import { Container, GlobalCss } from './styles'
+import Header from './components/Header'
+
 function App() {
-  return <div></div>
+  return (
+    <>
+      <GlobalCss />
+      <Container>
+        <Header />
+      </Container>
+    </>
+  )
 }
 
 export default App
