@@ -16,7 +16,7 @@ const Header = () => {
           <nav>
             <S.Links>
               <S.LinkItem>
-                <Link to="/categorias">Categorias</Link>
+                <Link to="/categories">Categorias</Link>
               </S.LinkItem>
               <S.LinkItem>
                 <Link to="#">Novidades</Link>
