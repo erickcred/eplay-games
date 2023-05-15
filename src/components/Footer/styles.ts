@@ -19,6 +19,12 @@ export const Links = styled.ul`
   font-weight: 600;
   display: flex;
   margin-top: 16px;
+
+  @media (max-width: 560px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 16px;
+  }
 `
 
 export const LinkItem = styled(Link)`

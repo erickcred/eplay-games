@@ -3,6 +3,13 @@ import { cores } from '../../styles'
 
 export const Items = styled.ul`
   display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
 `
 
 export const Action = styled.div`
@@ -35,6 +42,17 @@ export const Item = styled.li`
     -o-object-fit: cover;
     object-position: center;
     -o-object-position: center;
+
+    @media (max-width: 768px) {
+    }
+  }
+
+  @media (max-width: 590px) {
+    width: 100%;
+    > img {
+      width: 100%;
+      height: 80%;
+    }
   }
 
   &:hover {
@@ -96,6 +114,7 @@ export const ModalContent = styled.div`
   iframe {
     display: block;
     max-width: 100%;
+    width: 100%;
   }
 
   iframe {

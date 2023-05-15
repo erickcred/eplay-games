@@ -4,39 +4,55 @@ import Section from '../../components/Section'
 import Gallery from '../../components/Gallery'
 
 import residentEvil from '../../assets/images/resident.png'
+import { useEffect, useState } from 'react'
+import { Game } from '../Home'
+import { formataPreco } from '../../components/ProductList'
 
 const Product = () => {
   const { id } = useParams()
+  const [game, setGame] = useState<Game>()
+
+  useEffect(() => {
+    fetch(`https://fake-api-tau.vercel.app/api/eplay/jogos/${id}`)
+      .then((res) => res.json())
+      .then((res) => setGame(res))
+  }, [id])
+
+  if (!game) {
+    return <h3>Carregando...</h3>
+  }
 
   return (
     <>
-      <Hero />
+      <Hero game={game} />
 
       <Section background="black" title="Sobre o jogo">
-        <p>
-          Hogwarts Legacy é um RPG de ação e mundo aberto ambientado no mundo
-          apresentado nos livros de Harry Potter. Agora você pode assumir o
-          controle da ação e criar sua própria aventura. Descubra a sensação de
-          viver em Hogwarts enquanto faz aliados, luta contra bruxos das trevas
-          e, por fim, decide o destino do mundo bruxo. Seu legado é o que você
-          faz dele.
-        </p>
+        <p>{game?.description}</p>
       </Section>
 
       <Section background="gray" title="Mais detalhes">
         <p>
-          <b>Plataforma: </b>PlayStation 5 <br />
-          <b>Desenvolvedor: </b>Avalanche Software <br />
-          <b>Editora: </b>Portkey GAmes, subsidiária da Waner Bors, Interactive
-          Entretarinment <br />
-          <b>Idiomas: </b>O jogo oferece suporte a deiversos idiomas, incluindo
-          inglês, francês, alemao, italiano, português, entre outros. As opções
-          de áudio e legendas pode ser ajustadas nas configurações do jogo.
+          <b>Plataforma: </b>
+          {game?.details.system}
+          <br />
+          <b>Desenvolvedor: </b>
+          {game?.details.developer}
+          <br />
+          <b>Editora: </b>
+          {game?.details.publisher}
+          <br />
+          <b>Idiomas: </b>O jogo oferece suporte a deiversos idiomas, incluindo{' '}
+          {game?.details.languages.join(', ')}
+          jogo.
           <br />
         </p>
       </Section>
 
-      <Gallery name="Jogo teste" defaultCover={residentEvil} />
+      <Gallery
+        name={game.name}
+        defaultCover={game.media.cover}
+        items={game.media.gallery}
+      />
     </>
   )
 }

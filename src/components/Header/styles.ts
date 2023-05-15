@@ -12,6 +12,15 @@ export const HeaderBar = styled.header`
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   a {
     color: ${cores.branco};
     font-weight: bold;
