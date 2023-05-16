@@ -20,8 +20,6 @@ interface ModalState extends GalleryItem {
 }
 
 const Gallery = ({ defaultCover, name, items }: Props) => {
-  items.map((item) => console.log(item))
-
   const [modal, setModal] = useState<ModalState>({
     isVisible: false,
     type: 'image',

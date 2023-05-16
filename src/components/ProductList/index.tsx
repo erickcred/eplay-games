@@ -4,6 +4,7 @@ import Section from '../Section'
 import { Game } from '../../pages/Home'
 
 export type Props = {
+  id?: string
   title: string
   background: 'gray' | 'black'
   games: Game[]
@@ -16,7 +17,7 @@ export const formataPreco = (preco = 0) => {
   }).format(preco)
 }
 
-const ProductList = ({ title, background, games }: Props) => {
+const ProductList = ({ id, title, background, games }: Props) => {
   const getGameTags = (game: Game) => {
     const tags = []
 
@@ -36,7 +37,7 @@ const ProductList = ({ title, background, games }: Props) => {
   }
 
   return (
-    <Section title={title} background={background}>
+    <Section id={id} title={title} background={background}>
       <div className="container">
         <List>
           {games.map((game) => (

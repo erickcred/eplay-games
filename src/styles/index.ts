@@ -8,6 +8,11 @@ export const cores = {
   verde: '#10ac94'
 }
 
+export const breakpoints = {
+  desktop: '1024px',
+  tablet: '768px'
+}
+
 export const GlobalCss = createGlobalStyle`
 
   * {
@@ -25,14 +30,13 @@ export const GlobalCss = createGlobalStyle`
 
   .container {
     max-width: 1024px;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-  }
 
-  @media (max-width: 768px) {
-    .container {
-      width: 95%;
+    @media (max-width: ${breakpoints.desktop}) {
+      max-width: 80%;
     }
   }
+
 
 `

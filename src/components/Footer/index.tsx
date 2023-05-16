@@ -15,22 +15,19 @@ const Footer = () => {
         <FooterSection>
           <SectionTitle>Categorias</SectionTitle>
           <Links>
-            <LinkItem to="/">RPG</LinkItem>
-            <LinkItem to="/">Ação</LinkItem>
-            <LinkItem to="/">Aventura</LinkItem>
-            <LinkItem to="/">Esportes</LinkItem>
-            <LinkItem to="/">Simulação</LinkItem>
-            <LinkItem to="/">Estratégia</LinkItem>
-            <LinkItem to="/">FPS</LinkItem>
+            <LinkItem to="/categories#rpg">RPG</LinkItem>
+            <LinkItem to="/categories#action">Ação</LinkItem>
+            <LinkItem to="/categories#sport">Esportes</LinkItem>
+            <LinkItem to="/categories#simulation">Simulação</LinkItem>
+            <LinkItem to="/categories#fight">Luta</LinkItem>
           </Links>
         </FooterSection>
 
         <FooterSection>
           <SectionTitle>Acesso rápido</SectionTitle>
           <Links>
-            <LinkItem to="/">Novidades</LinkItem>
-            <LinkItem to="/">Promoções</LinkItem>
-            <LinkItem to="/">Em breve</LinkItem>
+            <LinkItem to="/#on-sale">Promoções</LinkItem>
+            <LinkItem to="/#coming-soon">Em breve</LinkItem>
           </Links>
         </FooterSection>
 

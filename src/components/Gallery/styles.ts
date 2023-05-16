@@ -4,12 +4,8 @@ import { cores } from '../../styles'
 export const Items = styled.ul`
   display: flex;
   align-items: center;
-
-  @media (max-width: 768px) {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
+  flex-wrap: wrap;
+  gap: 16px;
 `
 
 export const Action = styled.div`
@@ -29,7 +25,6 @@ export const Action = styled.div`
 
 export const Item = styled.li`
   list-style: none;
-  margin-right: 16px;
   position: relative;
   cursor: pointer;
 
@@ -44,14 +39,6 @@ export const Item = styled.li`
     -o-object-position: center;
 
     @media (max-width: 768px) {
-    }
-  }
-
-  @media (max-width: 590px) {
-    width: 100%;
-    > img {
-      width: 100%;
-      height: 80%;
     }
   }
 

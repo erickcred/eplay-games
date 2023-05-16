@@ -1,14 +1,15 @@
 import { SectionContainer, Title } from './styles'
 
 export type Props = {
+  id?: string
   title: string
   background: 'black' | 'gray'
   children: JSX.Element
 }
 
-const Section = ({ title, background, children }: Props) => {
+const Section = ({ title, background, children, id }: Props) => {
   return (
-    <SectionContainer background={background}>
+    <SectionContainer id={id} background={background}>
       <div className="container">
         <Title>{title}</Title>
         {children}

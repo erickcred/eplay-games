@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom'
-
 import styled from 'styled-components'
 import { cores } from '../../styles'
+import { HashLink } from 'react-router-hash-link'
 
 export const Container = styled.footer`
   background-color: ${cores.cinza};
@@ -27,7 +26,7 @@ export const Links = styled.ul`
   }
 `
 
-export const LinkItem = styled(Link)`
+export const LinkItem = styled(HashLink)`
   color: ${cores.cinzaClaro};
   text-decoration: none;
   margin-right: 8px;
